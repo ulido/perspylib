@@ -7,5 +7,7 @@ def tuplify(value):
         return tuple([tuplify(x) for x in value])
     elif isinstance(value, np.ndarray):
         return tuple([tuplify(x) for x in value])
+    elif isinstance(value, tuple):
+        return tuple([tuplify(x) for x in value])
     else:
         return value
